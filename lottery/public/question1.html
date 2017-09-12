@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	name="viewport">
+	<title>问题1</title>
+	<style>
+		html,body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		.content {
+			width: 100%;
+			height: 100%;
+			top:0;
+			z-index: -1; 
+			position: absolute;
+		}
+
+		.content img {
+			display: block;
+			outline: none;
+			border:0;
+			height: 100%;
+			width: 100%;
+			position:absolute;
+		}
+		.content input {
+			display: block;
+			outline: none;
+			border:0;
+			position:absolute;
+			vertical-align: middle;
+			height: 40px;
+			width: 20px;
+		}
+		.content .question {
+			display: block;
+			outline: none;
+			border:0;
+			width: 80%;
+			top: 16%;
+			left: 10%;
+			right: 10%;
+			position:absolute;
+		}
+		.content .next {
+			display: block;
+			outline: none;
+			border:0;
+			height: 8%;
+			width: 24%;
+			top: 87%;
+			left: 65%;
+			right: 5%;
+			position:absolute;
+		}
+		.rdo {
+			width: 20px;
+			height: 0px;
+			background-color: #000;
+			margin-right: 30px;
+			border-radius: 50%;
+			position: relative;
+		}
+		.rdo:before,.rdo:after {
+			content: '';
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			transition: .3s ease;
+			vertical-align: middle;
+		}
+		.rdo:before {
+			top: 10px;
+			left: 0px;
+			width: 18px;
+			height: 18px;
+			background-color: #FFC125;
+			border: 1px solid #FFC125;
+		}
+		.rdo:after {
+			top: 16px;
+			left: 6px;
+			width: 8px;
+			height: 8px;
+			background-color: #FFC125; 
+		}
+		.rdo:checked:after {
+			top: 14px;
+			left: 4px;
+			width: 12px;
+			height: 12px;
+			background-color:black; 
+		}
+		.rdo:checked:before {
+			border-color:#FFC125; 
+		}
+		a,img,button,input,textarea，p,table,form{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<form class="question">
+			<p>1.尼玛刚落地到伦敦，需要搭乘地铁到预定的旅店。这时尼玛问路边的老大爷哪里有subway？大爷一指，不远处有个subway的地标。请问五分钟后，王尼玛有可能出现在：</p>
+				<input type="radio" id="a" name="question1" class="rdo" value="0"/><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.旅店门口</p></td></tr></table></label>
+				<input type="radio" id="b" name="question1" class="rdo" value="10"/> <label for="b"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">B. 马路对面 </p></td></tr></table></label>
+				<input type="radio" id="c" name="question1" class="rdo" value="0"/><label for="c"> <table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;text-align: left;">C. 地铁刷卡处 </p></td></tr></table></label>
+				<input type="radio" id="d" name="question1" class="rdo" value="0"/><label for="d"> <table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">D. 爱丁堡的王子街</p></td></tr></table></label>
+			</form>
+			<img class="next" src="https://rednose.b0.upaiyun.com/uploads/image/201709/e32c50816699.png" onclick="get()">
+		</div>
+	</body>
+	</html>
+	<script type="text/javascript">
+		function get(){  
+			var value='';  
+			var radio = document.getElementsByName("question1");  
+			for(var i = 0;i<radio.length;i++)  
+			{  
+				if(radio[i].checked==true)  
+					{value = radio[i].value;  
+						break;}  
+					}
+					if (''==value) {
+						alert("你没有选择答案"); 
+					} else {
+						sessionStorage.setItem("question1",value);
+						self.location='question2'; 
+					}   
+				} 
+				// var url=window.location.href;
+	// var d=url.split("?")[1].split("=")[1];
+	// if (d=="1") {sessionStorage.setItem("question1",9);}
+	// else if (d=="2"){sessionStorage.setItem("question1",3);}
+	// else if (d=="3"){sessionStorage.setItem("question1",8);}
+	// else if (d=="4"){sessionStorage.setItem("question1",0);}
+	// else if (d=="5"){sessionStorage.setItem("question1",5);}
+ //        添加key-value 数据到 sessionStorage
+ //        sessionStorage.setItem("question1",d);
+ //        通过key来获取value
+ //        var dt = sessionStorage.getItem("question1");
+ //        alert(dt);
+ //        清空所有的key-value数据。
+ //        sessionStorage.clear();
+ //        alert(sessionStorage.length);
+</script>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	name="viewport">
+	<title>问题5</title>
+	<style>
+		html,body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		.content {
+			width: 100%;
+			height: 100%;
+			top:0;
+			z-index: -1; 
+			position: absolute;
+		}
+
+		.content img {
+			display: block;
+			outline: none;
+			border:0;
+			height: 100%;
+			width: 100%;
+			position:absolute;
+		}
+		.content input {
+			display: block;
+			outline: none;
+			border:0;
+			position:absolute;
+			vertical-align: middle;
+			height: 40px;
+			width: 20px;
+		}
+		.content .question {
+			display: block;
+			outline: none;
+			border:0;
+			width: 80%;
+			top: 16%;
+			left: 10%;
+			right: 10%;
+			position:absolute;
+		}
+		.content .next {
+			display: block;
+			outline: none;
+			border:0;
+			height: 8%;
+			width: 24%;
+			top: 87%;
+			left: 65%;
+			right: 5%;
+			position:absolute;
+		}
+		.rdo {
+			width: 20px;
+			height: 0px;
+			background-color: #000;
+			margin-right: 30px;
+			border-radius: 50%;
+			position: relative;
+		}
+		.rdo:before,.rdo:after {
+			content: '';
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			transition: .3s ease;
+			vertical-align: middle;
+		}
+		.rdo:before {
+			top: 10px;
+			left: 0px;
+			width: 18px;
+			height: 18px;
+			background-color: #FFC125;
+			border: 1px solid #FFC125;
+		}
+		.rdo:after {
+			top: 16px;
+			left: 6px;
+			width: 8px;
+			height: 8px;
+			background-color: #FFC125; 
+		}
+		.rdo:checked:after {
+			top: 14px;
+			left: 4px;
+			width: 12px;
+			height: 12px;
+			background-color:black; 
+		}
+		.rdo:checked:before {
+			border-color:#FFC125; 
+		}
+		p{
+			text-align: left;
+		}
+		a,img,button,input,textarea，p,table,form{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<form class="question">
+			<p>5.一日聚会，王尼玛吃汉堡不慎噎到，导致当场晕厥。旁边金发小哥立即拿出手机说到：l am here bro！l will call the ambulance.请根据此情形推断，接下来哪一幕最有可能发生：</p>
+				<input type="radio" id="a" name="question5" class="rdo" value="0" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.医院电话打不通，尼玛不幸去世。</p></td></tr></table></label>
+
+				<input type="radio" id="b" name="question5" class="rdo" value="0" /> <label for="b"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">B. 救护车8小时后赶到，送往医院途中的尼玛不幸去世。</p></td></tr></table></label>
+
+				<input type="radio" id="c" name="question5" class="rdo" value="10" style="margin-top: 15px;" /><label for="c"> <table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;text-align: left;">C.尼玛深度昏迷中有个声音不停地冲他喊到：尼玛啊你还没办理医保！随后尼玛突然清醒，跳起来一把夺过金发小哥的手机冷静道：l'm ok ！</p></td></tr></table></label>
+
+				<input type="radio" id="d" name="question5" class="rdo" value="0" /><label for="d"> <table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">D.店门口热心的homeless直接把尼玛抬到附近医院。</p></td></tr></table></label>
+			</form>
+			<img class="next" src="https://rednose.b0.upaiyun.com/uploads/image/201709/e32c50816699.png" onclick="get()">
+		</div>
+	</body>
+	</html>
+	<script type="text/javascript">
+		function get(){  
+			var value='';  
+			var radio = document.getElementsByName("question5");  
+			for(var i = 0;i<radio.length;i++)  
+			{  
+				if(radio[i].checked==true)  
+					{value = radio[i].value;  
+						break;}  
+					}
+					if (''==value) {
+						alert("你没有选择答案"); 
+					} else {
+						sessionStorage.setItem("question5",value);
+						self.location='question6'; 
+					}   
+				} 
+			</script>

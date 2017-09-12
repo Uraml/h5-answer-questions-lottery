@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	name="viewport">
+	<title>问题10</title>
+	<style>
+		html,body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		.content {
+			width: 100%;
+			height: 100%;
+			top:0;
+			z-index: -1; 
+			position: absolute;
+		}
+
+		.content img {
+			display: block;
+			outline: none;
+			border:0;
+			height: 100%;
+			width: 100%;
+			position:absolute;
+		}
+		.content input {
+			display: block;
+			outline: none;
+			border:0;
+			position:absolute;
+			vertical-align: middle;
+			height: 40px;
+			width: 20px;
+		}
+		.content .question {
+			display: block;
+			outline: none;
+			border:0;
+			width: 80%;
+			top: 16%;
+			left: 10%;
+			right: 10%;
+			position:absolute;
+		}
+		.content .next {
+			display: block;
+			outline: none;
+			border:0;
+			height: 8%;
+			width: 24%;
+			top: 87%;
+			left: 65%;
+			right: 5%;
+			position:absolute;
+		}
+		.rdo {
+			width: 20px;
+			height: 0px;
+			background-color: #000;
+			margin-right: 30px;
+			border-radius: 50%;
+			position: relative;
+		}
+		.rdo:before,.rdo:after {
+			content: '';
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			transition: .3s ease;
+			vertical-align: middle;
+		}
+		.rdo:before {
+			top: 10px;
+			left: 0px;
+			width: 18px;
+			height: 18px;
+			background-color: #FFC125;
+			border: 1px solid #FFC125;
+		}
+		.rdo:after {
+			top: 16px;
+			left: 6px;
+			width: 8px;
+			height: 8px;
+			background-color: #FFC125; 
+		}
+		.rdo:checked:after {
+			top: 14px;
+			left: 4px;
+			width: 12px;
+			height: 12px;
+			background-color:black; 
+		}
+		.rdo:checked:before {
+			border-color:#FFC125; 
+		}
+		a,img,button,input,textarea，p,table,form{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<form class="question">
+			<p>10. 来到书店的王尼玛，买了一本小说，上面标注12.99英镑，结账的时候才发现拿错了钱包，里面全打算暑假去美国旅行用的美金，好在店主统一用美元支付，请问尼玛将：</p>
+				<input type="radio" id="a" name="question10" class="rdo" value="10" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A. 支付＞12.99的美金</p></td></tr></table></label>
+
+				<input type="radio" id="b" name="question10" class="rdo" value="0" /> <label for="b"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">B. 支付＜12.99的美金</p></td></tr></table></label>
+
+				<input type="radio" id="c" name="question10" class="rdo" value="0" /><label for="c"> <table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;text-align: left;">C. 支付12.99美金</p></td></tr></table></label>
+
+				<input type="radio" id="d" name="question10" class="rdo" value="0" /><label for="d"> <table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">D. 拿起来就跑</p></td></tr></table></label>
+			</form>
+			<img class="next" src="https://rednose.b0.upaiyun.com/uploads/image/201709/e32c50816699.png" onclick="get()">
+		</div>
+	</body>
+	</html>
+	<script type="text/javascript">
+		function get(){  
+			var value='';  
+			var radio = document.getElementsByName("question10");  
+			for(var i = 0;i<radio.length;i++)  
+			{  
+				if(radio[i].checked==true)  
+					{value = radio[i].value;  
+						break;}  
+					}
+					if (''==value) {
+						alert("你没有选择答案"); 
+					} else {
+						sessionStorage.setItem("question10",value);
+						self.location='result'; 
+					}   
+				} 
+			</script>
