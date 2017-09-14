@@ -32,8 +32,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -102,7 +102,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>7.由于尼玛的英文能力不好，没办法解释清楚螺蛳粉的奥义，这时一位去过中国旅游的当地同学帮王尼玛解释道，这是一种闻起来很奇葩，但是吃起来很好吃的东西，就像鲱鱼罐头！接下来将发生:</p>
 				<input type="radio" id="a" name="question7" class="rdo" value="10" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.Thanks bro！</p></td></tr></table></label>
@@ -131,7 +131,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question7",value);
-						self.location='question8'; 
+						self.location='./question8.html'; 
 					}   
 				} 
 			</script>

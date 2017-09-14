@@ -31,8 +31,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -106,7 +106,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>2.王尼玛到达旅馆后，发现劳累一天，肚子咕咕作响，决定去餐厅大吃一顿。根据善良友人推荐的菜单，尼玛兴奋地点了一份著名的Stargazy pie.请问以下哪道菜是著名的不列颠料理之魂Stargazy pie：</p>
 				<p><input type="radio" id="a" name="question2" class="rdo" value="0" /><label for="a"><img class="result" src="https://rednose.b0.upaiyun.com/uploads/image/201709/d9502ae97709.png" align="middle" /></label></p><br/><br/><br/>
@@ -135,7 +135,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question2",value);
-						self.location='question3'; 
+						self.location='./question3.html'; 
 					}   
 				}  
 			</script>

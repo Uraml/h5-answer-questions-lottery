@@ -32,8 +32,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -105,7 +105,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>5.一日聚会，王尼玛吃汉堡不慎噎到，导致当场晕厥。旁边金发小哥立即拿出手机说到：l am here bro！l will call the ambulance.请根据此情形推断，接下来哪一幕最有可能发生：</p>
 				<input type="radio" id="a" name="question5" class="rdo" value="0" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.医院电话打不通，尼玛不幸去世。</p></td></tr></table></label>
@@ -134,7 +134,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question5",value);
-						self.location='question6'; 
+						self.location='./question6.html'; 
 					}   
 				} 
 			</script>

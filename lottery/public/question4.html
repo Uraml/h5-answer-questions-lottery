@@ -32,8 +32,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -102,7 +102,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>4.愉快的留学生活正式开始了，第一天在与教授聊天时，面对对方一连串的问话和风一样的语速,如果没有听懂，王尼玛这时应该怎样回应对方？</p>
 				<input type="radio" id="a" name="question4" class="rdo" value="0" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.Sorry l can not hear you！</p></td></tr></table></label>
@@ -131,7 +131,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question4",value);
-						self.location='question5'; 
+						self.location='./question5.html'; 
 					}   
 				} 
 			</script>

@@ -32,8 +32,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -102,7 +102,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>9. 观看完Trooping the Colour的王尼玛打算去临近的书店转一圈，走到路口时发现自己迷路了，这时对面过来一个小朋友，尼玛赶紧向她问路：“Go ahead until you see the corner，and turn left，you will find the bookstore”，“Ture left？”，“right！”一番对话后，请问尼玛应该：</p>
 				<input type="radio" id="a" name="question9" class="rdo" value="10" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A. 在十字路口左转</p></td></tr></table></label>
@@ -131,7 +131,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question9",value);
-						self.location='question10'; 
+						self.location='./question10.html'; 
 					}   
 				} 
 			</script>

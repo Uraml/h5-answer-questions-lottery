@@ -32,8 +32,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -102,7 +102,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>1.尼玛刚落地到伦敦，需要搭乘地铁到预定的旅店。这时尼玛问路边的老大爷哪里有subway？大爷一指，不远处有个subway的地标。请问五分钟后，王尼玛有可能出现在：</p>
 				<input type="radio" id="a" name="question1" class="rdo" value="0"/><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.旅店门口</p></td></tr></table></label>
@@ -128,7 +128,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question1",value);
-						self.location='question2'; 
+						self.location='./question2.html'; 
 					}   
 				} 
 				// var url=window.location.href;

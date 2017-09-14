@@ -32,8 +32,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -105,7 +105,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>6.大病初愈的王尼玛，得到朋友从家乡带来的螺蛳粉一袋。在异国留学，能吃到家乡的特产是很开心的一件事情。一日，尼玛在学校餐厅打开螺蛳粉，微波炉微3分钟，接下来将发生:</p>
 				<input type="radio" id="a" name="question6" class="rdo" value="0" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.王尼玛开心地吃完，抹嘴走人。</p></td></tr></table></label>
@@ -134,7 +134,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question6",value);
-						self.location='question7'; 
+						self.location='./question7.html'; 
 					}   
 				} 
 			</script>

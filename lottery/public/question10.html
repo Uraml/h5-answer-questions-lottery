@@ -32,8 +32,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -102,7 +102,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>10. 来到书店的王尼玛，买了一本小说，上面标注12.99英镑，结账的时候才发现拿错了钱包，里面全打算暑假去美国旅行用的美金，好在店主统一用美元支付，请问尼玛将：</p>
 				<input type="radio" id="a" name="question10" class="rdo" value="10" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A. 支付＞12.99的美金</p></td></tr></table></label>
@@ -131,7 +131,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question10",value);
-						self.location='result'; 
+						self.location='./result.html'; 
 					}   
 				} 
 			</script>

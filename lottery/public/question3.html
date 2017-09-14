@@ -31,8 +31,8 @@
 			border:0;
 			position:absolute;
 			vertical-align: middle;
-			height: 40px;
-			width: 20px;
+			height: 0px;
+			width: 0px;
 		}
 		.content .question {
 			display: block;
@@ -101,7 +101,7 @@
 </head>
 <body>
 	<div class="content">
-		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png">
+		<img alt="开始答题" src="https://rednose.b0.upaiyun.com/uploads/image/201709/a2817b82bb2c.png"  onclick="javascript:void(0);">
 		<form class="question">
 			<p>3.吃完饭已经是傍晚，尼玛步行返回旅馆，正走到十字路口，此时一辆失控的车将其撞飞到人行道上，一分钟后警察赶到，焦急得拍打着尼玛的大脸道：How are you？！这时尼玛应该回答：</p>
 				<input type="radio" id="a" name="question3" class="rdo" value="0" /><label for="a"><table  height="48px" topmargin="0" leftmargin="30"><tr><td align="absmiddle"><p style="margin: 0px;margin-left: 30px;">A.请说中文</p></td></tr></table></label>
@@ -130,7 +130,7 @@
 						alert("你没有选择答案"); 
 					} else {
 						sessionStorage.setItem("question3",value);
-						self.location='question4'; 
+						self.location='./question4.html'; 
 					}   
 				} 
 			</script>
